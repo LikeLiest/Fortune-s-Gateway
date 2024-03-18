@@ -1,0 +1,42 @@
+.footer {
+    background-color: black;
+    color: #fff;
+}
+
+.footer-content {
+    margin-bottom: 24px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 300px;
+
+    margin: auto;
+    gap: 8px;
+}
+
+.footer h1 {
+    cursor: pointer;
+    margin-left: 72px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 2;
+    margin-bottom: 8px;
+}
+
+#your-rights {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+
+    margin-top: 72px;
+
+    opacity: 0.6;
+}

@@ -1,0 +1,200 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-title {
+    flex: 1; /* Растягивает заголовок, чтобы он занимал доступное пространство */
+    text-align: center;
+    margin-left: 48px;
+}
+
+.header-title h1 {
+    cursor: pointer;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-right-part {
+    margin-left: auto;
+}
+
+.header-right-part ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-right: 48px;
+}
+
+.header-right-part ol li {
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.7s ease;
+}
+
+.header-right-part ol li:hover {
+    transform: scale(1.05);
+    color: #ff9800;
+}
+
+/* Баланс */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    color: #333333;
+    line-height: 2;
+    transition: transform 0.3s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-account {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-account:hover,
+.close-account:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content.show {
+    transform: translateY(0%);
+}
+
+.modal.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content.hide {
+    transform: translateY(-50%);
+}
+
+#add-money:hover {
+    animation: bounce 1s infinite alternate;
+}
+
+.modal-content button {
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+/*Аккаунт */
+
+.account-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    margin: 16px auto;
+    gap: 48px;
+}
+
+.model-account-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-menu {
+    display: none;
+    margin-top: 72px;
+}
+
+.account-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-info-left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 80px;
+}
+
+.account-info-right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80px;
+
+    margin-left: 16px;
+}
+
+/* ID */
+#balance-info {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+#deposit {
+    background-color: #6a6aff;
+}
+
+#withdraw {
+    margin-left: 16px;
+    background-color: #7bbe38;
+}
+
+#itAva {
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 50%;
+}

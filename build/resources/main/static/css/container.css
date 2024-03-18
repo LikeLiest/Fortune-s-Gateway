@@ -1,0 +1,25 @@
+body {
+    background-color: #f1ebeb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}

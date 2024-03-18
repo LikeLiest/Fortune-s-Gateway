@@ -1,0 +1,18 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  profiles:
+    active: ${ACTIVE_PROFILE:dev}
+
+  datasource:
+    url: jdbc:mysql://${MY_SQL_HOST}:${MY_SQL_PORT}/${MY_SQL_DB}
+    username: ${MY_SQL_USERNAME}
+    password: ${MY_SQL_PASSWORD}
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update

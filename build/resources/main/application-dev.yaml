@@ -1,0 +1,10 @@
+#DataBase
+MY_SQL_USERNAME: root
+MY_SQL_PASSWORD: shigatsu
+MY_SQL_HOST: localhost
+MY_SQL_DB: fortunaDB
+MY_SQL_PORT: 3306
+
+#Server
+SERVER_PORT: 8080
+ACTIVE_PROFILE: dev
