@@ -178,13 +178,15 @@
 
 /* ID */
 #balance-info {
-    font-size: 19px;
+    font-size: 32px;
+    color: #00b818;
     font-weight: 500;
-    margin-bottom: 24px;
+    line-height: 2;
+    margin-bottom: 16px;
 }
 
 #deposit {
-    background-color: #6a6aff;
+    background-color: #174d8d;
 }
 
 #withdraw {

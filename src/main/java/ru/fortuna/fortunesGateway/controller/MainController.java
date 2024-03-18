@@ -12,4 +12,9 @@ public class MainController {
     public String homePage() {
         return "index";
     }
+
+    @GetMapping("/panel")
+    public String panel() {
+        return "panel";
+    }
 }
