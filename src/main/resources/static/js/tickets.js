@@ -31,7 +31,6 @@ buyButtons.forEach(function (button) {
                 balance -= price;
 
                 let randomNumber = Math.floor(Math.random() * 100) + 1;
-
                 let chance = parseFloat(ticket.getAttribute('data-chance'));
                 console.log('Шанс на победу был: '+ chance)
 
@@ -41,8 +40,8 @@ buyButtons.forEach(function (button) {
                     document.getElementById("balance-info").textContent = parseInt(balance);
                     alert("Поздравляем, вы выиграли! Новый баланс: " + parseInt(balance));
                 } else {
-                    document.getElementById("balanceValue").textContent = balance;
-                    document.getElementById("balance-info").textContent = balance;
+                    document.getElementById("balanceValue").textContent = parseInt(balance);
+                    document.getElementById("balance-info").textContent = parseInt(balance);
                     alert("К сожалению, вы проиграли. Новый баланс: " + parseInt(balance));
                 }
             } else {
