@@ -256,8 +256,7 @@
 
 /* Стили для секции с казино */
 .casino {
-
-    background-color: #fff;
+    width: 80%;
     padding: 50px 20px;
     text-align: center;
 }

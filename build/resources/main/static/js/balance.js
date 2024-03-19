@@ -17,3 +17,27 @@ window.onclick = function (event) {
         accountModal.style.display = "none";
     }
 }
+
+document.getElementById('deposit').addEventListener('click', () => {
+    let amount = parseInt(prompt('Введите сумму для пополнения баланса:'));
+
+    amount = parseInt(amount);
+
+    if (!isNaN(amount) && amount > 0) {
+        balance = parseInt(balance) + amount;
+        document.getElementById("balance-info").textContent = balance;
+    } else {
+        alert('Введите корректную сумму для пополнения баланса.');
+    }
+});
+
+document.getElementById('withdraw').addEventListener('click', () => {
+    const amount = parseInt(prompt('Введите сумму которую вы хотите вывести: '));
+
+    if (!isNaN(amount) && amount > 0) {
+        balance = parseInt(balance) - amount;
+        document.getElementById("balance-info").textContent = balance;
+    } else {
+        alert('Введите корректную сумму для пополнения баланса.');
+    }
+});

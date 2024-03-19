@@ -5,27 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/panel.css">
     <title>Buy Ticket Form</title>
 </head>
 <body>
 
 <h2>Пожалуйста, заполните данные:</h2>
 
-<form id="userDataForm" action="index.html">
-    <label for="firstName">Имя:</label>
-    <input type="text" id="firstName" name="firstName" required><br><br>
-
-    <label for="lastName">Фамилия:</label>
-    <input type="text" id="lastName" name="lastName" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="balance">Баланс:</label>
-    <input type="number" id="balance" name="balance" required><br><br>
-
-    <button type="submit">Отправить</button>
+<form id="account-form" action="index.html" method="GET">
+    <input type="text" id="firstNameInput" name="firstName" placeholder="Введите имя">
+    <input type="text" id="lastNameInput" name="lastName" placeholder="Введите фамилию">
+    <input type="email" id="emailInput" name="email" placeholder="Введите email">
+    <input type="number" id="balanceInput" name="balance" placeholder="Введите баланс">
+    <input type="submit" value="Сохранить">
 </form>
+
 
 <script src="/js/formaccount.js" defer></script>
 </body>

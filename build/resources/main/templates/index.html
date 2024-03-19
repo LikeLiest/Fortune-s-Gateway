@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="/css/container.css">
     <link rel="stylesheet" href="/css/footer.css">
 
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
     <title>Fortune's Gateway</title>
 </head>
 <body>
@@ -25,9 +28,8 @@
 
         <div class="header-right-part">
             <ol>
-                <li>Поиск</li>
-                <li id="add-money">Посмотреть баланс</li>
-                <li id="account">Аккаунт</li>
+                <li id="add-money">Посмотреть баланс <span class="material-symbols-outlined">account_balance</span></li>
+                <li id="account"><span class="material-symbols-outlined" style="font-size: 24px">account_circle</span></li>
             </ol>
         </div>
 
@@ -35,40 +37,44 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
 
-                <p id="balance-info"></p>
+                <span>Ваш текущий баланс: </span> <br>
+                <span id="balance-info"></span> руб<br>
                 <button id="deposit">Пополнить баланс</button>
                 <button id="withdraw">Вывести деньги</button>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span>Введите данные вашей карты и сумму для пополнения:</span>
+                <br>
+                <input type="text" id="card-number" placeholder="Номер карты">
+                <input type="text" id="amount" placeholder="Сумма">
+                <button id="confirm-deposit">Подтвердить</button>
             </div>
         </div>
 
         <div id="account-modal" class="modal">
             <div class="modal-content">
                 <span class="close-account">&times;</span>
-
                 <div class="account-wrapper">
                     <img src="/images/logo/ava.jpeg" id="itAva" alt="itAva">
-
-
                     <div class="account-modal-content">
-
                         <div class="account-info-left-part">
                             <p>Имя:</p>
                             <p>Фамилия:</p>
                             <p>Email:</p>
                             <p>Баланс:</p>
                         </div>
-
                         <div class="account-info-right-part" id="account-info-right-part">
-                            <p id="firstNameValue">-</p>
-                            <p id="lastNameValue">-</p>
-                            <p id="emailValue">-</p>
-                            <p id="balanceValue">-</p>
+                            <span id="firstNameValue">-</span>
+                            <span id="lastNameValue">-</span>
+                            <span id="emailValue">-</span>
+                            <span id="balanceValue">-</span>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -77,14 +83,15 @@
     <main class="main">
         <div class="up-part-content">
         </div>
-
         <div class="main-content">
             <section class="advertisement">
                 <div class="advertisement-container">
                     <h1>Добро пожаловать на сайт "Fortune's gateway"!</h1>
                     <p>
-                        Мы рады приветствовать вас на нашем сайте. "Fortune's gateway" предлагает захватывающий мир азарта и удачи, где вы
-                        можете испытать своё везение и выиграть крупные призы. Присоединяйтесь к нам прямо сейчас и вперёд за
+                        Мы рады приветствовать вас на нашем сайте. "Fortune's gateway" предлагает захватывающий мир
+                        азарта и удачи, где вы
+                        можете испытать своё везение и выиграть крупные призы. Присоединяйтесь к нам прямо сейчас и
+                        вперёд за
                         победой!
                     </p>
                 </div>
@@ -98,59 +105,59 @@
 
                 <div class="ticket-options">
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="1" data-price="100" data-chance="10">
+                        <h3>Билет №1</h3>
+                        <p class="price">Стоимость: 100 руб.</p>
+                        <p>Шанс: 10%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="2" data-price="150" data-chance="15">
+                        <h3>Билет №2</h3>
+                        <p class="price">Стоимость: 200 руб.</p>
+                        <p>Шанс: 15%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="3" data-price="250" data-chance="20">
+                        <h3>Билет №3</h3>
+                        <p class="price">Стоимость 250 руб.</p>
+                        <p>Шанс 20%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="4" data-price="325" data-chance="25">
+                        <h3>Билет №4</h3>
+                        <p class="price">Стоимость 325 руб.</p>
+                        <p>Шанс 25%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="5" data-price="400" data-chance="30">
+                        <h3>Билет №5</h3>
+                        <p class="price">Стоимость 400 руб.</p>
+                        <p>Шанс 30%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="6" data-price="550" data-chance="35">
+                        <h3>Билет №6</h3>
+                        <p class="price">Стоимость 550 руб.</p>
+                        <p>Шанс 35%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="7" data-price="650" data-chance="40">
+                        <h3>Билет №7</h3>
+                        <p class="price">Стоимость 650 руб.</p>
+                        <p>Шанс 40%</p>
                         <button>Купить билет</button>
                     </div>
 
-                    <div class="ticket">
-                        <h3>Билет №x</h3>
-                        <p>Стоимость x</p>
-                        <p>Шанс X%</p>
+                    <div class="ticket" data-number="8" data-price="850" data-chance="45">
+                        <h3>Билет №8</h3>
+                        <p class="price">Стоимость <span id="price">850</span> руб.</p>
+                        <p>Шанс 45%</p>
                         <button>Купить билет</button>
                     </div>
 
@@ -203,6 +210,6 @@
 <script src="/js/account.js" defer></script>
 <script src="/js/footer.js" defer></script>
 <script src="/js/header.js" defer></script>
-<script src="/js/formaccount.js" defer></script>
+<script src="/js/tickets.js" defer></script>
 </body>
 </html>
